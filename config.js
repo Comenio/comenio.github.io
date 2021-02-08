@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Comenio Landing Page',
+  siteTitle: 'Comenio e-learning platform',
   manifestName: 'Comenio',
   manifestShortName: 'Comenio',
   manifestStartUrl: '/',
