@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-const widgetUrl = 'https://app.mailjet.com/widget/iframe/4ezi/ItX';
+function embedMailjetWidget() {
+  return {__html: '<iframe src="https://app.mailjet.com/widget/iframe/4ezi/ItX" style="position: absolute;width:0;height:0;border:0;"></iframe>'};
+}
 
 export class EmailForm extends Component {
   constructor() {
@@ -35,6 +37,7 @@ export class EmailForm extends Component {
         </span>
         <input id="w-preview-consent-checkbox" type="checkbox" name="w-preview-consent-checkbox" required="required" />
         <label style={{position: 'fixed', margin: '68px 0 0 0'}} htmlFor="w-preview-consent-checkbox">I agree to receive this newsletter and know that I can easily unsubscribe at any time.</label>
+        <div dangerouslySetInnerHTML={embedMailjetWidget()} />
       </form>
     );
   }
